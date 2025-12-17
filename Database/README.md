@@ -1,35 +1,33 @@
 
 # 목차 (Table of Contents)
 
-1. [데이터베이스](#데이터베이스)
-   - [데이터베이스를 사용하는 이유](#데이터베이스를-사용하는-이유)
-   - [데이터베이스의 특징](#데이터베이스의-특징)
-   - [데이터베이스의 성능 이슈 (Disk I/O)](#데이터베이스의-성능-이슈-disk-io)
-2. [Index (인덱스)](#index-인덱스)
-   - [인덱스란 무엇인가?](#인덱스란-무엇인가)
-   - [Index 구조와 원리](#index-구조와-원리)
-   - [Index 성능과 최적화 (Cardinality & Covering Index)](#index-성능과-최적화-cardinality--covering-index)
-   - [Clustered vs Non-Clustered Index](#clustered-vs-non-clustered-index)
-3. [정규화와 반정규화](#정규화와-반정규화)
-   - [정규화 (Normalization)](#정규화-normalization)
-   - [반정규화 (De-normalization)](#반정규화-de-normalization)
-4. [Transaction (트랜잭션)](#transaction-트랜잭션)
-   - [트랜잭션이란?](#트랜잭션이란)
-   - [ACID와 상태](#acid와-상태)
-   - [트랜잭션의 상태](#트랜잭션의-상태)
-   - [Transaction Isolation Level (격리 수준)](#transaction-isolation-level-격리-수준)
-5. [동시성 제어 (Concurrency Control)](#동시성-제어-concurrency-control)
-   - [Lock의 종류 (Optimistic vs Pessimistic)](#lock의-종류-optimistic-vs-pessimistic)
-   - [MVCC (Multi-Version Concurrency Control)](#mvcc-multi-version-concurrency-control)
-   - [교착상태 (Deadlock)](#교착상태-deadlock)
-6. [DB 아키텍처와 확장](#db-아키텍처와-확장)
-   - [Replication vs Clustering](#replication-vs-clustering)
-   - [Sharding (샤딩)](#sharding-샤딩)
-7. [Connection Pool](#connection-pool)
-8. [Statement vs PreparedStatement](#statement-vs-preparedstatement)
-9. [NoSQL](#nosql)
-   - [CAP 이론 (분산 시스템의 3요소)](#cap-이론-분산-시스템의-3요소)
-   - [NoSQL 분류와 사용 사례](#nosql-분류와-사용-사례)
+1. [📁데이터베이스](#데이터베이스)
+   - 데이터베이스를 사용하는 이유
+   - 데이터베이스의 특징
+   - 데이터베이스의 성능 이슈 (Disk I/O)
+2. [📁Index (인덱스)](#index-인덱스)
+   - 인덱스란 무엇인가?
+   - Index 구조와 원리
+   - Index 성능과 최적화 (Cardinality & Covering Index)
+   - Clustered vs Non-Clustered Index
+3. [📁정규화와 반정규화](#정규화와-반정규화)
+   - 정규화 (Normalization)
+   - 반정규화 (De-normalization)
+4. [📁Transaction (트랜잭션)](#transaction-트랜잭션)
+   - 트랜잭션이란?
+   - ACID와 상태
+   - 트랜잭션의 상태
+   - Transaction Isolation Level (격리 수준)
+5. [📁동시성 제어 (Concurrency Control)](#동시성-제어-concurrency-control)
+   - 교착상태 (Deadlock)
+6. [📁DB 아키텍처와 확장](#db-아키텍처와-확장)
+   - Replication vs Clustering
+   - Sharding (샤딩)
+7. [📁Connection Pool](#connection-pool)
+8. [📁Statement vs PreparedStatement](#statement-vs-preparedstatement)
+9. [📁NoSQL](#nosql)
+   - CAP 이론 (분산 시스템의 3요소)
+   - NoSQL 분류와 사용 사례
 
 ---
 
