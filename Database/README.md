@@ -31,7 +31,7 @@
 
 ---
 
-## 데이터베이스
+## 📁데이터베이스
 #### 데이터베이스를 사용하는 이유
 > 과거의 파일 시스템은 데이터 종속성, 중복성, 무결성 유지의 어려움이 있었다. 데이터베이스(DBMS)는 이러한 문제를 해결하고 데이터를 체계적으로 관리하기 위해 등장했다.
 
@@ -64,7 +64,7 @@
 
 --- 
 
-## Index (인덱스)
+## 📁Index (인덱스)
 #### 인덱스란 무엇인가?
 > 인덱스는 **데이터의 저장(Write) 성능을 희생하고 읽기(Read) 속도를 높이는 기능**이다. 책의 '색인'과 같다. 
 * 인덱스가 없으면 DB는 테이블 전체를 뒤지는 **Full Table Scan**을 수행해야 한다.
@@ -135,7 +135,7 @@ SELECT nickname FROM member WHERE email = 'test@test.com';
 
 ---
 
-## 정규화와 반정규화
+## 📁정규화와 반정규화
 #### 정규화 (Normalization)
 > 데이터의 중복을 줄이고, 이상 현상(Anomaly)을 방지하기 위해 테이블을 분리하는 과정.
 
@@ -153,7 +153,7 @@ SELECT nickname FROM member WHERE email = 'test@test.com';
 
 ---
 
-## Transaction (트랜잭션)
+## 📁Transaction (트랜잭션)
 #### 트랜잭션이란?
 > 데이터베이스의 논리적 작업 단위. "전부 되거나, 아예 안 되거나(All or Nothing)"를 보장한다.
 
@@ -191,7 +191,7 @@ SELECT nickname FROM member WHERE email = 'test@test.com';
     * 동시 처리 성능이 급격히 떨어지므로 특수한 경우에만 사용한다.
 ---
 
-## 동시성 제어 (Concurrency Control)
+## 📁동시성 제어 (Concurrency Control)
 #### Lock의 종류 (Optimistic vs Pessimistic)
 1. **비관적 락 (Pessimistic Lock)**:
     * "충돌이 발생할 것이다"라고 가정하고 데이터를 읽을 때 아예 Lock(X-Lock, S-Lock)을 걸어버린다.
@@ -232,7 +232,7 @@ INSERT INTO B VALUES(1); -- B 테이블 Lock 대기... (Deadlock 발생!)
 3. **타임아웃**: 트랜잭션 대기 시간을 설정하여 일정 시간이 지나면 롤백시킨다.
 
 ---
-## DB 아키텍처와 확장
+## 📁DB 아키텍처와 확장
 > 서비스가 커지면 한 대의 DB 서버로 감당할 수 없다. 이때 Scale-out 전략이 필요하다.
 
 #### Replication vs Clustering
@@ -258,7 +258,7 @@ INSERT INTO B VALUES(1); -- B 테이블 Lock 대기... (Deadlock 발생!)
 
 ---
 
-## Connection Pool
+## 📁Connection Pool
 > DB 연결(Connection)은 TCP/IP 핸드쉐이크 등 비용이 매우 비싼 작업이다. 요청마다 연결을 맺고 끊으면 성능이 급격히 저하된다.
 
 * **개념**: 미리 일정 수의 Connection 객체를 만들어 **Pool**에 보관해두고, 요청이 오면 빌려주고 작업이 끝나면 반납받는 방식.
@@ -267,7 +267,7 @@ INSERT INTO B VALUES(1); -- B 테이블 Lock 대기... (Deadlock 발생!)
 
 ---
 
-## Statement vs PreparedStatement
+## 📁Statement vs PreparedStatement
 > 단순 속도 차이보다 **보안**과 **캐싱** 관점이 더 중요하다.
 
 1. **Statement**:
@@ -282,7 +282,7 @@ INSERT INTO B VALUES(1); -- B 테이블 Lock 대기... (Deadlock 발생!)
 
 ---
 
-## NoSQL
+## 📁NoSQL
 > RDBMS의 경직된 스키마와 확장성(Scale-out) 한계를 극복하기 위해 등장했다.
 
 #### CAP 이론 (분산 시스템의 3요소)
