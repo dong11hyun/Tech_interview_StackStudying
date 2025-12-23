@@ -21,7 +21,7 @@
 
 ## 📁Image vs Container
 
-> **가장 많이 묻는 기본 개념**. (OOP의 Class와 Object 관계와 유사)
+> **핵심 기본 개념** (OOP의 Class와 Object 관계와 유사)
 
 1. **Docker Image (Class)**:
     * 애플리케이션 실행에 필요한 **모든 것(코드, 런타임, 라이브러리, 환경 설정 등)을 포함한 불변(Immutable) 파일**.
@@ -36,7 +36,7 @@
 
 ## 📁Dockerfile (Build Process)
 
-> Docker Image를 만들기 위한 **설명서(Recipe)**.
+> Docker Image를 만들기 위한 **설명서(Recipe)**
 
 * **주요 명령어**:
     * `FROM`: 베이스 이미지 지정 (OS 또는 런타임).
@@ -44,7 +44,7 @@
     * `RUN`: 명령어를 실행하여 의존성 설치 (이미지 빌드 시 실행).
     * `CMD` / `ENTRYPOINT`: 컨테이너가 시작될 때 실행할 명령어 (실행 시점).
 
-* **Layer Caching (면접 포인트)**:
+* **Layer Caching (중요 포인트)**:
     * Dockerfile의 각 라인은 하나의 레이어가 된다.
     * 빌드 시 **변경된 내용이 없는 레이어는 캐시를 재사용**한다.
     * **Tip**: 자주 변경되는 파일(소스코드) `COPY`는 최대한 아래쪽에 배치하고, 잘 안 바뀌는 `RUN pip install` 등을 위쪽에 배치해야 빌드 속도가 빠르다.
