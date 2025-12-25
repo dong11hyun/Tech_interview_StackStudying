@@ -53,6 +53,8 @@
     * 통합 관리를 통해 자료의 중복 문제를 해결한다.
 
 
+---
+
 #### 데이터베이스의 성능 이슈 (Disk I/O)
 > 데이터베이스 성능 튜닝의 90% 이상은 **Disk I/O를 줄이는 것**에 초점이 맞춰져 있다. 메모리(RAM) 접근 속도는 나노초(ns) 단위인 반면, 디스크 접근은 밀리초(ms) 단위로 수십만 배 느리기 때문이다.
 
@@ -61,6 +63,8 @@
     * 데이터베이스 쿼리 튜닝은 불필요한 Random I/O를 줄이고, 가능한 Sequential I/O를 유도하거나 메모리(Buffer Pool)에서 데이터를 처리하도록 하는 과정이다.
     * 순차 I/O가 빠르지만, 현실의 DB 작업은 대부분 랜덤 I/O이다.
     * 쿼리 튜닝은 랜덤 I/O를 줄이고, 가능한 순차 I/O로 유도하거나 메모리(Buffer Pool)를 활용하게 만드는 과정이다.
+
+[목차🔝](#목차-table-of-contents)
 
 --- 
 
@@ -133,6 +137,8 @@ SELECT nickname FROM member WHERE email = 'test@test.com';
     * 리프 노드에는 **데이터가 위치한 주소(또는 PK 값)**가 저장된다.
     * 검색 후 실제 데이터를 가져오기 위해 한 번 더 조회(Lookup)가 필요할 수 있다.
 
+[목차🔝](#목차-table-of-contents)
+
 ---
 
 ## 📁정규화와 반정규화
@@ -150,6 +156,8 @@ SELECT nickname FROM member WHERE email = 'test@test.com';
 
 * **대상**: 통계 테이블, 자주 Join되는 테이블, 대량의 Range Scan이 필요한 경우.
 * **주의**: 데이터 불일치(Inconsistency)가 발생할 수 있으므로 애플리케이션 레벨에서 동기화 관리가 필수적이다.
+
+[목차🔝](#목차-table-of-contents)
 
 ---
 
@@ -189,6 +197,9 @@ SELECT nickname FROM member WHERE email = 'test@test.com';
 4. **SERIALIZABLE (Lv.3)**
     * 가장 엄격한 수준. 트랜잭션을 순차적으로 처리하는 것과 같은 효과.
     * 동시 처리 성능이 급격히 떨어지므로 특수한 경우에만 사용한다.
+
+[목차🔝](#목차-table-of-contents)
+
 ---
 
 ## 📁동시성 제어 (Concurrency Control)
@@ -231,6 +242,8 @@ INSERT INTO B VALUES(1); -- B 테이블 Lock 대기... (Deadlock 발생!)
 2. **인덱스**: 인덱스가 없으면 잠금 범위가 테이블 전체로 확대될 수 있으므로 적절한 인덱스를 사용한다.
 3. **타임아웃**: 트랜잭션 대기 시간을 설정하여 일정 시간이 지나면 롤백시킨다.
 
+[목차🔝](#목차-table-of-contents)
+
 ---
 ## 📁DB 아키텍처와 확장
 > 서비스가 커지면 한 대의 DB 서버로 감당할 수 없다. 이때 Scale-out 전략이 필요하다.
@@ -256,6 +269,8 @@ INSERT INTO B VALUES(1); -- B 테이블 Lock 대기... (Deadlock 발생!)
 * **장점**: 데이터 용량의 한계를 극복하고 쓰기 성능을 분산시킬 수 있다.
 * **단점**: 관리가 매우 복잡하며, 여러 샤드에 걸친 조회(Cross-Partition Join)나 트랜잭션 처리가 어렵다.
 
+[목차🔝](#목차-table-of-contents)
+
 ---
 
 ## 📁Connection Pool
@@ -264,6 +279,8 @@ INSERT INTO B VALUES(1); -- B 테이블 Lock 대기... (Deadlock 발생!)
 * **개념**: 미리 일정 수의 Connection 객체를 만들어 **Pool**에 보관해두고, 요청이 오면 빌려주고 작업이 끝나면 반납받는 방식.
 * **대표 라이브러리**: **HikariCP** (Spring Boot 2.0부터 기본).
 * **설정 주의**: Pool Size가 너무 작으면 대기 시간이 길어지고, 너무 크면 메모리 낭비 및 컨텍스트 스위칭 오버헤드가 발생한다.
+
+[목차🔝](#목차-table-of-contents)
 
 ---
 
@@ -279,6 +296,8 @@ INSERT INTO B VALUES(1); -- B 테이블 Lock 대기... (Deadlock 발생!)
     * `?`를 사용하여 파라미터를 바인딩한다.
     * **SQL Injection 예방**: 특수문자를 자동으로 이스케이프 처리한다.
     * **Pre-compilation**: DB가 미리 쿼리 실행 계획을 캐싱(Caching)해두고 재사용하므로, 반복 실행 시 성능이 우수하다.
+
+[목차🔝](#목차-table-of-contents)
 
 ---
 
@@ -309,3 +328,4 @@ INSERT INTO B VALUES(1); -- B 테이블 Lock 대기... (Deadlock 발생!)
     * 데이터 간의 '관계' 탐색에 특화.
     * **용도**: 소셜 네트워크 추천, 사기 탐지, 경로 찾기.
 
+[목차🔝](#목차-table-of-contents)
