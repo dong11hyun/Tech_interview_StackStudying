@@ -45,7 +45,7 @@
 * 기존 Django는 HTTP 요청만 처리할 수 있었지만, Channels를 통해 **WebSocket, IoT 프로토콜(MQTT)** 등 연결 지향형 프로토콜을 처리할 수 있게 되었다.
 * **핵심**: 기존의 Django 뷰(View) 작성 방식과 유사하게 비동기 코드를 작성할 수 있게 해준다.
 
-#### 핵심 개념: Consumer & Scope
+#### Consumer & Scope란 무엇인가?
 
 **Consumer (소비자)**
 * 기존 Django의 **View**에 해당한다.
