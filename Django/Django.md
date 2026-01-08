@@ -11,6 +11,8 @@
    - Daphne란 무엇인가?
    - Gunicorn vs Daphne
 4. [📁DRF (Django REST Framework) 란 무엇인가?](#drf-django-rest-framework-란-무엇인가)
+5. [📄Django 성능 최적화 (N+1 문제)](Optimization.md)
+6. [📄DRF 실무 심화 (ViewSet, Versioning)](DRF_Advanced.md)
 ---
 ## 📁Django (The Framework)
 
