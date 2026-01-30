@@ -213,7 +213,7 @@ SELECT nickname FROM member WHERE email = 'test@test.com';
     * "충돌이 나지 않을 것이다"라고 가정하고 Lock 없이 작업을 수행한다.
     * 업데이트 시점에 버전(Version) 번호나 타임스탬프를 확인하여, 내가 읽은 이후에 수정된 내역이 있는지 검사한다.
     * 충돌 발생 시 재시도 로직을 애플리케이션에서 직접 구현해야 한다.
-
+    * ETag, If-Match : 
 
 #### MVCC (Multi-Version Concurrency Control)
 > 최신 DB(MySQL InnoDB, PostgreSQL 등)가 Lock을 사용하지 않고도 일관된 읽기(Consistent Read)를 제공하는 핵심 기술이다.
